@@ -18,5 +18,8 @@ tell application "JustFocus"
     set today to current date
     set hh to hours of today
     set mm to minutes of today
+    if mm < 10 then
+        set mm to "0" & mm
+    end if
     log "Have started pomodoro at " & hh & ":" & mm
 end tell
